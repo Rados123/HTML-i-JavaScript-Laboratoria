@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Formularz</h1>
+    <form action="mailto:costam@wp.pl" method="POST" enctype="text/plain">
+        <p>Podaj imię i nazwisko</p>
+        <label for="Imię">Imię:</label><br>
+        <input type="text" id="Imię" name="Imię" value=""><br>
+        <label for="Nazwisko">Nazwisko:</label><br>
+        <input type="text" id="Nazwisko" name="Nazwisko" value="">
+        <p>Podaj swój adres Email</p>        
+        <label for="Email">Email:</label><br>
+        <input type="text" id="Email" name="Email" value="">
+        <p>Wydział UG na którym studiujesz</p>
+        <input type="radio" name="Wydział" value="WZR">Wydział Zarządzania
+        <input type="radio" name="Wydział" value="WPIA">Wydział Prawa i Administracji
+        <input type="radio" name="Wydział" value="WNS">Wydział Nauk Społecznch
+        <p>Jakie są twoję zainteresowania</p>
+        <input type="checkbox" name="zainteresowania" value="muzyka">Muzyka
+        <input type="checkbox" name="zainteresowania" value="Filmy">Filmy
+        <input type="checkbox" name="zainteresowania" value="Turysytyka">Turysytyka
+        <p>System operacyjny z którego korzystasz</p>
+        <select name="system_operacyjny">
+            <option selected>Windows</option>
+            <option>Mac</option>
+            <option>Linux</option>
+        </select>
+        <p></p>
+        <input type="submit" value="Wyślij">
+      </form>
+
+
+</body>
+</html>
+
