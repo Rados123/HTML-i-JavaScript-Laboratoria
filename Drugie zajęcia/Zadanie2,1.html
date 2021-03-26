@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #Strona {  width: 100%;}
+        #Naglowek { border: 1px solid black;  }
+        #Menu { border: 1px solid black; border-right: none; border-left: none; ;
+         background-color: black;  min-width: 50px;  height: 34px; }
+        #ObszarLogowania { text-align: right;  background-color: lightblue ;}
+        #Tresc { font-family: Arial, Helvetica, sans-serif; }
+        #PierwszyObszarBoczny { border: 1px solid black; width: 200px; height: 300px; float: left;}
+        #DrugiObszarBoczny { border: 1px solid black; width: 200px; height: 300px; float: right ;}
+        #ObszarRoboczy { border: 1px solid black; height: 300px; float:none;}
+        .option {
+         float: left;
+         color: white;
+         text-align: center;
+         background-color: black;
+         border-style: solid;
+         border-color: gold;
+         min-width: 50px;
+         height: 25px;
+         font-size: 18px;
+         opacity: 0.8;
+         padding: 2px;
+         width: 15.5%;
+         }
+        .option :hover {background-color: #000000; cursor: pointer;}
+    </style>
+
+</head>
+<body>
+<div id="Strona">
+    <div id="Naglowek">
+        Logo
+        <div id="Menu">
+            <div class="option">Strona główna</div>
+            <div class="option">Dystrybucje</div>
+            <div class="option">Instalacja</div>
+            <div class="option">Polecenia</div>
+            <div class="option">Linus Torvaids</div>
+            <div class="option">O projekcie</div>
+        </div>
+        <div id="ObszarLogowania">Zaloguj</div>
+    </div>
+    <div id="Tresc">
+        <div id="PierwszyObszarBoczny">Radosław Kulka</div>
+        <div id="DrugiObszarBoczny">
+        <p id="data"></p>
+		<script>
+		var d = new Date();
+		document.getElementById("data").innerHTML = d;
+		</script>
+		</div>
+        <div id="ObszarRoboczy"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris elementum mauris sed odio bibendum facilisis. Donec mollis, erat porttitor pellentesque consequat, tellus tellus volutpat nunc, at placerat diam arcu sed felis. Curabitur interdum, erat ut tempus dapibus, libero ligula euismod nisl, a facilisis massa leo a ante. Aenean viverra lectus at diam porttitor blandit. Fusce ullamcorper a nulla eget blandit.</div>
+    </div>
+</div>
+</body>
+</html>
