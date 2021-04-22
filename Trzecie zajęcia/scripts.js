@@ -1,3 +1,5 @@
+alert (yo)
+
 const input = document.querySelector('#name');
 input.addEventListener('change', function() {
   const val = this.value;
