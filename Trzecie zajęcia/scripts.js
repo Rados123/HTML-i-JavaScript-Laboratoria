@@ -1,4 +1,6 @@
-alert ("yo");
+alert ("cos");
+
+
 
 const input = document.querySelector('#name');
 input.addEventListener('change', function() {
