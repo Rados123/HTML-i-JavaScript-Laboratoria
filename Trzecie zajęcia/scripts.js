@@ -15,4 +15,5 @@ input.addEventListener('change', function() {
   } else {
       alert('Twoje imię to: ' +val[0].touppercase() + val.slice(1) );
   }
+  
 });
