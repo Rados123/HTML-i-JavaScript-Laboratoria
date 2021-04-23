@@ -20,9 +20,6 @@ form.addEventListener('submit', (e) => {
     if (!email.value.match(mail_znaki)) {
         messages.push('Adres Email jest nieprawidłowy')
     }
-    
-
-
     if (messages.length > 0) {
         e.preventDefault()
         errorElement.innerText = messages.join(', ')

@@ -6,16 +6,12 @@
     </head>
     <body>
         <div> Skrpyt 2: Pobierz 7 cyfr z pola, zapisz w tablicy, znajdz najwieksza w tablicy i ja zapisz
-            <form id="form2" action="/" method="POST" >
+            <form id="form2" onsubmit="return Wynik()" >
             <div>
                 <label for="liczby">Wprowadź 7 liczb</label>
                 <input id="liczby" name="liczby" type="text" maxlength="7"
                 pattern="[0-9]{7}" title="Wprowadź 7 cyfr">
-                <button type="submit">Prześlij liczby</button>
-            </div>
-            <div>
-                <button onclick="FunkcjaLiczb()">Wynik</button>
-                <p id="siedem"></p>
+                <input type="submit" value="Oblicz">
             </div>
             </form>
 
