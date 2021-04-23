@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pL-Pl">
+    <head>
+
+    </head>
+    <body>
+        <p>Pobierz 2 liczby całkowite w polach tekstowych formularza i obliczający NWD tych liczb.</p>
+        <form name="form4" onsubmit="return NWD()">
+           Podaj liczbę pierwszą: <input type="number" name="num1" id="num1"> <br>
+           Podaj liczbę drugą: <input type="number" name="num2" id="num2"> <br>
+           <input type="submit" value="Oblicz">
+
+        </form>
+        <script>
+        function NWD() {
+            let Liczba
+            const num1 = document.getElementById('num1').value;
+            const num2 = document.getElementById('num2').value;
+
+            for (let i = 1; i<=num1 && i<=num2; i++) {
+                if ( num1 % i == 0 && num2 % i == 0) {
+                    Liczba = i;
+                }
+            }
+            alert("Największy wspólny dzielnik liczb " + num1 + " i " + num2 + " to: " + Liczba)
+        }      
+        </script>
+    </body>
+</html>
