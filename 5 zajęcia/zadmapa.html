@@ -10,8 +10,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>	
 </head>
 <body>
-    <p>Wykorzystaj bibliotekę leaflet nakieruj mapę startową na kampus UG wydział Zarządzania, Centrum dydaktyczne, Wydział Ekonomiczny. Opisz markerami  Wydział Zarządzania, Centrum dydaktyczne, Wydział Ekonomiczny. Wokół budynku Policji zastosuj circle  z odpowiednim promieniem i opisem. A parking przed budynkiem dydaktycznym podziel na 2 strefy: parking dla studentów, i parking dla pracowników – użyj poligon. (Przycisk na stronie->wyskakujące dodatkowe okno z mapą)</p>
-<div id="mapid" style="width: 600px; height: 400px;"></div>
+<div id="mapid" style="width: 800px; height: 600px;"></div>
 <script>
 	var mymap = L.map('mapid').setView([54.44466, 18.556241], 15);
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
