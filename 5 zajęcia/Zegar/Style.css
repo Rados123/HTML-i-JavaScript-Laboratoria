@@ -42,21 +42,10 @@
     height: 30%; /*wysokość wskazówki*/
     background-color: red;
 }
-/*2 zegar
-.hand.aminutes, 
-.hand.aseconds {
-    height: calc(50% - 3px); 
-    background-color: black;
+#czas {
+    text-align: center;
 }
-.hand.aseconds {
-    width: 1px;
-}
-.hand.aminutes {
-    width: 3px;
-}
-.hand.ahours{
-    top: 20%;
-    width: 4px;
-    height: 30%; 
-    background-color: red;
+#tubudzik {
+    text-align:center;
+
 }

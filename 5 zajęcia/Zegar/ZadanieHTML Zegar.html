@@ -13,7 +13,45 @@
             <div class="hand hours"></div
         </div>
     </div>
-    <h2 class="text">Czas Warszawski</h2>   
+    <h2 class="text">Czas Warszawski</h2>
+    <h1 id="czas"></h1>
+    <div id='tubudzik'>
+        <h2>Ustaw budzik działający w czasie Warszawskim</h2>
+        <label>
+            <div>
+              <select id='alarmhrs'></select>
+            </div>
+          </label>
+          <label>
+            <div>
+              <select id='alarmmins'></select>
+            </div>
+          </label>
+          <label>
+            <div>
+              <select id='alarmsecs'></select>
+            </div>
+          </label>
+          <label>
+            <div>
+              <select id="ampm">
+                <option value="AM">Przed Południem</option>
+                <option value="PM">Po Południu</option>
+              </select>
+            </div>
+          </label>
+          
+          <div id='buttonHolder'>
+            <div>
+              <button id='setButton' onClick='alarmSet()'>Set Alarm</button>
+            </div>
+        
+            <div>
+              <button id='clearButton' onClick='alarmClear()'>Clear Alarm</button>
+            </div>
+        </div>
+    </div>
+    
     <div class="wall">
         <div class="clock">
             <div class="hand aseconds"></div>
@@ -47,5 +85,6 @@
     </div>
     <h2 class="text">Czas Chiński</h2>
     <script type="text/javascript" src="Script.js"></script>
+    <script type="text/javascript" src="budzik.js"></script>
 </body>
 </html>
