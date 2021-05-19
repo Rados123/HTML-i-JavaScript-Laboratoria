@@ -24,7 +24,14 @@
         console.log(json[0].address.geo.lng);
     }
     });
-
+    xhr.addEventListener("load",  e => {
+    if (xhr.status === 200) {
+        const json = JSON.parse(xhr.response);
+        console.log(json[0].address.geo.lat);
+        console.log(json[0].address.geo.lng);
+        //var ll1 = L.latlng(json[0].address.geo.lat),json[0].address.geo.lng );
+    }
+    });
 	var mymap = L.map('mapid').setView([0,00, 0.00], 1);
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,

@@ -3,20 +3,34 @@ const nazwa = document.getElementById('nazwa')
 const email = document.getElementById('email')
 const form = document.getElementById('form')
 const errorElement = document.getElementById('error')
-var znaki = /^[a-zA-ZąĄćĆęĘłŁńŃóÓśŚźŹżŻ]+$/
+var znaki = /^[ a-zA-ZąĄćĆęĘłŁńŃóÓśŚźŹżŻ]+$/
 var mail_znaki = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
 form.addEventListener('submit', (e) => {
     let messages = []
+
+    function pierwszawielka(slowo){
+        return slowo.charAt(0) === slowo.charAt(0).toUpperCase()
+    }
+
     if (nazwa.value === '' || nazwa.value == null) {
-        messages.push('Imię i nazwisko jest wymagane')
+        messages.push('Imię jest wymagane')
     }
     if (!nazwa.value.match(znaki)) {
-        messages.push('W polu mogą się znajdować tylko polskie znaki')
+        messages.push('W polu imienia mogą się znajdować tylko polskie znaki')
     }
-    //if (!nazwa[0].toUpperCase() == nazwa[0]) {
-    //    messages.push('Imię i Nazwisko piszę się z wielkiej litery')
-    //}
+    if (nazwisko.value === '' || nazwisko.value == null) {
+        messages.push('Nazwisko jest wymagane')
+    }
+    if (!nazwisko.value.match(znaki)) {
+        messages.push('W polu naziwska mogą się znajdować tylko polskie znaki')
+    }
+    if (!pierwszawielka(nazwa.value)) {
+        messages.push('Imię piszę się z wielkiej litery')
+    }
+    if (!pierwszawielka(nazwisko.value)) {
+        messages.push('Nazwisko piszę się z wielkiej litery')
+    }
     if (!email.value.match(mail_znaki)) {
         messages.push('Adres Email jest nieprawidłowy')
     }
