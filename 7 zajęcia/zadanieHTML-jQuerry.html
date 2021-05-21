@@ -1,0 +1,89 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+<button class="test" id="testAnim" type="button">Animacja Kwadratowa</button><br>
+<button class="test" id="testAnim6" type="button">Animacja Liniowa</button><br>
+<button class="test" id="testAnim2" type="button">Animacja Rozszerzająca</button><br>
+<button class="test" id="testAnim4" type="button">Animacja Rozszerzająca wielokrotnego kliknięcia</button><br>
+
+
+<div id="pierwszy">coś</div>
+<button class="test-ajax" type="button">Kliknij i zobacz w konsoli debugera</button><br>
+<ul class="user-list"></ul>
+
+<script type="text/javascript">
+
+$('#pierwszy')
+.css({ background : 'blue' })
+.delay(2000)
+ .slideUp()
+ .delay(1000) 
+.fadeIn(1000); 
+
+$("#testAnim").on('click', function(){
+    $(this).animate({
+        width: "500px",
+        opacity: 0.4,
+        fontSize: "3em",
+        borderWidth: "10px"
+    }, 1500);
+});
+
+$("#testAnim2").on('click', function(){ $(this).animate({ height:200,
+ width:400,
+ opacity: 0.5 },
+ { duration: 1000, //czas animacji 
+ease: 'linear', //typ animacji 
+complete: function() { //funkcja zwrotna alert("koniec animacji"); 
+}
+ } ); });
+
+$("#testAnim6").on({ 
+'mouseover' : 
+    function() { $(this).stop().animate({width:300}, 500); }, 'mouseout' : 
+    function() { $(this).stop().animate({width:200}, 500); } }); 
+
+$("#testAnim4").on('click', function(){ $(this).animate({ width: "+=" + 50,
+ height: "+=" + 10,
+ opacity: "-=" + 0.1, 
+duration : 2000  }); });
+
+
+const apiUrl = "https://jsonplaceholder.typicode.com";
+const $list = $('.user-list');
+
+$('.test-ajax').on('click', function() {
+    const $btn = $(this);
+
+
+
+    //wykonujemy połączenie
+    $.ajax({
+        url : apiUrl + '/users',
+        dataType : 'json'
+    })
+    .done((res) => {
+        //czyścimy listę przed dodaniem użytkowników
+        //inaczej ponowne kliknięcie duplikowało by użytkowników na liście
+        $list.empty();
+
+        //robimy pętlę po zwróconej tablicy
+        //dołączając do listy kolejne LI z imieniem i emailem użytkownika
+        res.forEach(el => {
+            $list.append(`<li>${el.address.geo.lat} : ${el.address.geo.lng}</li>`);
+        })
+    })
+    .always(() => {
+        //po zakończeniu wczytywania wyłączamy loading
+        //i włączamy przycisk
+        $btn.removeClass('loading');
+        $btn.prop('disabled', false);
+    });
+});
+</script>
+</body>
+</html>
+

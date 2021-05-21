@@ -32,6 +32,9 @@ Powyższe repozytorium zawiera wykonanae zadania z laboratorium **"Języki skryp
 ### 6 zajęcia - Ajax - XMLHttpRequest();
 * Zadaniem było pobranie z przykładu 10 współrzędnych i naniesie ich na mapę w postaci znaczników, po kliknięciu wyświetlane są imię, nazwisko i adres użytkownika. 
 
+### 7 zajęcia -jQuerry
+* Należało wykonać kilka przycisków i następnie je animować przy zastosowaniu biblioteki jQuerry.
+
 ## Technologie wykorzystane
 Zadania zostały wykonane z użyciem następujących języków: HTML5, CSS3, Javascript, Leaflet, Ajax.
 
